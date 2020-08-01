@@ -7,7 +7,7 @@ para ello vamos a ejecutar el siguiente comando y verificar la salida que nos mu
 ## Pasos
 
 ```sh
-$ docker run hello-world
+docker run hello-world
 ```
 
 ## Resultado
@@ -45,9 +45,9 @@ For more examples and ideas, visit:
 
 En el caso que quieras borrar la imagen hello-world de tu maquina para que esta no ocupe espacio podes hacerlo con el siguiente comando.
 
-*NOTA*: usamos el parametro `--force` por si docker no permite borrar imagenes que contengan contenedores, de esta forma borramos tanto la imagen como el contendor, pero por lo general es recomendable borar ambas cosas por separado.
+*NOTA*: usamos el parametro `--force` por si docker no permite borrar imagenes que contengan contenedores, de esta forma borramos la imagen, pero esto no borra el contenedor, por lo que es recomendable primero borrar el contenedor.
 
 ```sh
-$ docker rmi hello-world --force
+docker rmi hello-world --force
 ```
 
