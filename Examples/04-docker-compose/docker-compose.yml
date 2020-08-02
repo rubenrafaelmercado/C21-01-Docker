@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+    proxy:
+        image: nginx:latest
+        ports:
+            - "8080:80"
+        volumes:
+            - ./nginx/site.conf:/etc/nginx/conf.d/default.conf
+        networks:
+            - code-network
+    web:
+        build: ./publisher
+        #volumes:
+        #    - ./publish/html/:/usr/share/nginx/html
+        networks:
+            - code-network
+    api:
+        build: ./api
+        networks:
+            - code-network
+
+networks:
+    code-network:
+        driver: bridge
