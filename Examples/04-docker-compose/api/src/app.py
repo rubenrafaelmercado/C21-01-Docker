@@ -1,7 +1,9 @@
-from flask import Flask
+from flask import Flask, request
 from flask import jsonify
 
+
 app = Flask(__name__)
+
 
 alumnos = [
     {'id': 1, 'name': 'Juan Garcia'},
@@ -9,6 +11,7 @@ alumnos = [
     {'id': 3, 'name': 'Santiago Perez'},
     {'id': 4, 'name': 'Vanesa Olmo'}
 ]
+
 
 @app.route('/say-hello/<name>', methods=['GET'])
 def say_hello(name):
@@ -24,13 +27,16 @@ def get_alumnos():
     return jsonify(response)
 
 
-@app.route('/alumnos/add/<name>', methods=['GET'])
-def add_alumnos(name):
+@app.route('/alumnos', methods=['POST'])
+def add_alumnos():
+    json = request.get_json(force=True)
+    if json.get('name') is None:
+        return jsonify({'message': 'Bad request'}), 400
     s = {'id': len(alumnos) + 1,
-         'name': name}
+         'name': json.get('name')}
     alumnos.append(s)
     response = alumnos
-    return jsonify(response)
+    return jsonify(s), 200
 
 
 if __name__ == '__main__':
