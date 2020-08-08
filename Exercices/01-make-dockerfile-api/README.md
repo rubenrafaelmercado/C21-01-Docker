@@ -21,4 +21,9 @@ app
 ```
 
 ## Correr el contendor
+
+```sh
 docker run -p 5000:5000 exericie01:go-web
+```
+
+Luego ingresar en su browser a `http://localhost:5000/`
