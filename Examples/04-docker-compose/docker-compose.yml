@@ -11,8 +11,6 @@ services:
             - code-network
     web:
         build: ./publisher
-        #volumes:
-        #    - ./publish/html/:/usr/share/nginx/html
         networks:
             - code-network
     api:
