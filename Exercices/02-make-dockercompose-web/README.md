@@ -1,4 +1,4 @@
-# Exrcice 02
+# Exercice 02
 
 En este caso vamos a crear un sitio para dar de alta alumnos y listarlos, compuesto por 3 services:
 
