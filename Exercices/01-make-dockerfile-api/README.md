@@ -1,4 +1,4 @@
-# Ejercicio 01 
+Ejercicio 01
 
 En este ejercicio solamente vamos a crear un contenedor docker con el tag `exericie01:go-web` basado en la imagen `golang:1.14` para correr nuestro servicio web creado en go en el archivo `main.go`.
 
