@@ -27,3 +27,22 @@ docker run -p 5000:5000 exericie01:go-web
 ```
 
 Luego ingresar en su browser a `http://localhost:5000/`
+
+
+
+** Exercise responses **
+
+build image
+ docker build --no-cache . -t exercise01:go-web
+
+create and run container
+ docker run  -p 5000:5000 exercise01:go-web 
+
+restart container
+ docker start container-name
+
+stop container
+ docker stop container-name
+
+ 
+

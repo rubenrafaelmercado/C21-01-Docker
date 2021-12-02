@@ -22,3 +22,4 @@ func main() {
 	r.Get("/", resultadoEjercicio)
 
 	http.ListenAndServe(":5000", r)
+}
