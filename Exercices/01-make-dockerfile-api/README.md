@@ -30,7 +30,8 @@ Luego ingresar en su browser a `http://localhost:5000/`
 
 
 
-** Exercise responses **
+
+## Exercise responses 
 
 build image
  docker build --no-cache . -t exercise01:go-web
@@ -44,5 +45,5 @@ restart container
 stop container
  docker stop container-name
 
- 
+
 
